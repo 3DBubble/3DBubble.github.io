@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.display {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: right;
+}
+
+.expression {
+    min-height: 24px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ccc;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.result {
+    font-size: 36px;
+    font-weight: 500;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.buttons {
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.button-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.button-row:last-child {
+    margin-bottom: 0;
+}
+
+.btn {
+    flex: 1;
+    height: 60px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.number {
+    background-color: white;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.operator {
+    background-color: #3498db;
+    color: white;
+    font-size: 22px;
+}
+
+.function {
+    background-color: #ecf0f1;
+    color: #444;
+}
+
+.equals {
+    background-color: #2ecc71;
+    color: white;
+    flex: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .calculator-container {
+        padding: 10px;
+    }
+    
+    .btn {
+        height: 50px;
+        font-size: 16px;
+        margin: 0 3px;
+    }
+    
+    .display {
+        padding: 15px;
+    }
+    
+    .result {
+        font-size: 28px;
+    }
+}
+
+/* Future extension styles */
+.mode-switch {
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.mode-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+/* These classes will be useful for future extensions */
+.hidden {
+    display: none;
+}
+
+.matrix-container, .binary-container, .graph-container {
+    /* Styling for future extensions */
+    padding: 15px;
+}
